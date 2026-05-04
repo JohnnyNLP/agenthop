@@ -1,0 +1,18 @@
+# ── Core: evaluation harness (testbed/) ───────────────────────────────────
+openai>=1.60.0
+anthropic>=0.39.0          # usage.input_tokens excludes cache_read/cache_creation since 0.39
+google-genai>=1.50.0       # thinking_level support added in 1.50
+
+# ── Optional: .env loading ────────────────────────────────────────────────
+python-dotenv>=1.0.0
+
+# ── Construction pipeline (pipeline/) ─────────────────────────────────────
+requests>=2.31
+beautifulsoup4>=4.12
+tqdm>=4.66
+
+# ── Audit interfaces (pipeline/stage7_*_app.py, stage8_review_app.py) ─────
+gradio>=4.0
+
+# ── Dataset download ──────────────────────────────────────────────────────
+huggingface_hub>=0.24
