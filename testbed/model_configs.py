@@ -181,10 +181,10 @@ _register(
 )
 
 _register(
-    ["qwen/qwen3.5-", "qwen3.5-"],
+    ["qwen/qwen3.5-", "qwen3.5-", "qwen/qwen3.6-", "qwen3.6-"],
     ModelConfig(
         family="qwen35",
-        display_name="Qwen 3.5",
+        display_name="Qwen 3.5/3.6",
         sglang_parser="qwen",
         vllm_parser="hermes",
         tool_call_support=TOOL_SUPPORT_SERVER,
@@ -458,7 +458,7 @@ _hp(["deepseek-reasoner"], HyperparameterPreset(
 ))
 
 # Google Gemini 3 — set top_k and thinking; leave T/top_p/max_tokens at defaults
-_hp(["gemini-3.1-pro"], HyperparameterPreset(
+_hp(["gemini-3.1-pro", "gemini-3-pro-preview", "gemini-3-pro"], HyperparameterPreset(
     top_k=64,
     reasoning_effort="medium",
 ))
@@ -491,7 +491,7 @@ _hp(["moonshotai/kimi-k2.5", "kimi-k2.5"], HyperparameterPreset(
 ))
 
 # Self-hosted open-weight (via sglang/vllm)
-_hp(["qwen/qwen3.5-", "qwen3.5-"], HyperparameterPreset(
+_hp(["qwen/qwen3.5-", "qwen3.5-", "qwen/qwen3.6-", "qwen3.6-"], HyperparameterPreset(
     top_k=20,
     notes="Thinking mode defaults. Non-thinking would use T=0.7, top_p=0.8.",
 ))
