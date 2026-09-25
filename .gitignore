@@ -34,3 +34,6 @@ vllm_*.log
 .DS_Store
 .idea/
 .vscode/
+
+# OMC local state
+.omc/
