@@ -2,7 +2,7 @@
 
 Evaluation harness and construction code for **AgentHop**: a diagnostic benchmark for multi-step scientific question answering. 1,011 four-option MCQs grounded in citation chains over 7,205 arXiv papers from nine major CS venues (2022–2025). Each item is paired with a four-axis decomposition (search recall, conversion rate, tool-use pattern, resource management) that turns a single evaluation run into per-model failure-mode attribution rather than a single accuracy number.
 
-- **Paper:** accepted at NeurIPS 2026 Datasets and Benchmarks Track
+- **Paper:** accepted at NeurIPS 2026 Evaluation and Datasets Track
 - **Dataset:** [`nlpai-lab/agenthop` on Hugging Face](https://huggingface.co/datasets/nlpai-lab/agenthop) — CC-BY 4.0
 - **Code (this repo):** Apache-2.0
 
@@ -181,7 +181,7 @@ exact prompt variant).
 @inproceedings{park2026agenthop,
   title     = {AgentHop: A Diagnostic Benchmark for Multi-Step Scientific Question Answering},
   author    = {Park, Chanhee and Yoon, Jeongho and Han, Sungbin and Moon, Hyeonseok and Lim, Heuiseok},
-  booktitle = {Advances in Neural Information Processing Systems (NeurIPS), Datasets and Benchmarks Track},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS), Evaluation and Datasets Track},
   year      = {2026}
 }
 ```
