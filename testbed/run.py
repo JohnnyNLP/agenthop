@@ -2,7 +2,7 @@
 
 Usage:
     # Run on the HuggingFace release directory
-    #   huggingface-cli download agenthop/agenthop --repo-type dataset \
+    #   huggingface-cli download nlpai-lab/agenthop --repo-type dataset \
     #       --local-dir ../AgentHop_release
     python run.py --data ../AgentHop_release --model gpt-4.1 --workers 8
     python run.py --data ../AgentHop_release --model claude-opus-4-6 --workers 4

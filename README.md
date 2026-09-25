@@ -3,7 +3,7 @@
 Evaluation harness and construction code for **AgentHop**: a diagnostic benchmark for multi-step scientific question answering. 1,011 four-option MCQs grounded in citation chains over 7,205 arXiv papers from nine major CS venues (2022–2025). Each item is paired with a four-axis decomposition (search recall, conversion rate, tool-use pattern, resource management) that turns a single evaluation run into per-model failure-mode attribution rather than a single accuracy number.
 
 - **Paper:** accepted at NeurIPS 2026 Datasets and Benchmarks Track
-- **Dataset:** [`agenthop/agenthop` on Hugging Face](https://huggingface.co/datasets/agenthop/agenthop) — CC-BY 4.0
+- **Dataset:** [`nlpai-lab/agenthop` on Hugging Face](https://huggingface.co/datasets/nlpai-lab/agenthop) — CC-BY 4.0
 - **Code (this repo):** Apache-2.0
 
 ## Repository layout
@@ -39,15 +39,6 @@ AgentHop/
     ├── build_recall_triage_cases.py     # Helper: build the recall-triage case file
     ├── package_release.py               # Final HuggingFace-format packaging
     └── run_pipeline.py                  # End-to-end runner for the automated stages (2a–6)
-    ├── stage7_prepare_batch.py          # Build LLM-auditor batch JSONL
-    ├── stage7_generate_analysis.py      # Run the LLM auditor (GPT-5.4 Batch API)
-    ├── stage7_prebake_data.py           # Slim paper_pool for the Gradio apps
-    ├── stage7_quality_app.py            # Gradio: seven-auditor quality verdict UI
-    ├── stage7_recall_app.py             # Gradio: recall-label triage UI
-    ├── stage8_review_app.py             # Gradio: lead-author flagged-item triage
-    ├── stage8_apply_verdicts.py         # Apply audit verdicts back to release files
-    ├── stage8_apply_section_filter.py   # Structural section-length pass
-    └── build_recall_triage_cases.py     # Helper: build the recall-triage case file
 ```
 
 `testbed/` is the main artifact a reviewer needs to reproduce results;
@@ -80,7 +71,7 @@ it is loaded automatically.
 
 ```bash
 pip install huggingface_hub
-huggingface-cli download agenthop/agenthop --repo-type dataset \
+huggingface-cli download nlpai-lab/agenthop --repo-type dataset \
     --local-dir AgentHop_release
 ```
 
