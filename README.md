@@ -187,14 +187,13 @@ exact prompt variant).
 ## Citation
 
 ```bibtex
-@inproceedings{agenthop2026,
+@inproceedings{park2026agenthop,
   title     = {AgentHop: A Diagnostic Benchmark for Multi-Step Scientific Question Answering},
+  author    = {Park, Chanhee and Yoon, Jeongho and Han, Sungbin and Moon, Hyeonseok and Lim, Heuiseok},
   booktitle = {Advances in Neural Information Processing Systems (NeurIPS), Datasets and Benchmarks Track},
   year      = {2026}
 }
 ```
-
-The author list will be added with the camera-ready version.
 
 Citation will be updated to the published version upon acceptance.
 
