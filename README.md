@@ -1,8 +1,8 @@
 # AgentHop
 
-Evaluation harness and construction code for **AgentHop**: a diagnostic benchmark for multi-step scientific question answering. 1,011 four-option MCQs grounded in citation chains over 7,205 arXiv papers from nine major CS venues (2022–2025). Each item is paired with a four-axis decomposition (search recall, conversion rate, tool-use pattern, resource management) that turns a single evaluation run into per-model failure-mode attribution rather than a single accuracy number.
+Evaluation harness and construction code for **AgentHop**: a diagnostic benchmark for agentic multi-hop question answering over scientific citation graphs. 1,011 four-option MCQs grounded in citation chains over 7,205 arXiv papers from nine major CS venues (2022–2025). Each item is paired with a four-axis decomposition (search recall, conversion rate, tool-use pattern, resource management) that turns a single evaluation run into per-model failure-mode attribution rather than a single accuracy number.
 
-- **Paper:** accepted at NeurIPS 2026 Evaluation and Datasets Track
+- **Paper:** accepted at NeurIPS 2026 Evaluations and Datasets Track
 - **Dataset:** [`nlpai-lab/agenthop` on Hugging Face](https://huggingface.co/datasets/nlpai-lab/agenthop) — CC-BY 4.0
 - **Code (this repo):** Apache-2.0
 
@@ -89,6 +89,11 @@ print(len(samples))                 # 1011
 print(samples[0]["question"])
 print(samples[0]["paper_pool"])     # papers reachable from this sample's seed
 ```
+
+The download also contains `generator_control/`, a separate 90-item split written by a
+different question generator (Inkling instead of GPT-5.4) to measure generator bias. It
+uses the same layout, so pass `AgentHop_release/generator_control` to the loader or to
+`run.py --data`. Report it separately; it is not part of the main score.
 
 ## Evaluate a model
 
@@ -179,14 +184,14 @@ exact prompt variant).
 
 ```bibtex
 @inproceedings{park2026agenthop,
-  title     = {AgentHop: A Diagnostic Benchmark for Multi-Step Scientific Question Answering},
+  title     = {AgentHop: A Diagnostic Benchmark for Agentic Multi-Hop Question Answering over Scientific Citation Graphs},
   author    = {Park, Chanhee and Yoon, Jeongho and Han, Sungbin and Moon, Hyeonseok and Lim, Heuiseok},
-  booktitle = {Advances in Neural Information Processing Systems (NeurIPS), Evaluation and Datasets Track},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS), Evaluations and Datasets Track},
   year      = {2026}
 }
 ```
 
-Citation will be updated to the published version upon acceptance.
+Citation will be updated with proceedings details once published.
 
 ## License
 

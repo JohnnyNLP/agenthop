@@ -634,10 +634,11 @@ Multi-auditor usage examples:
 
     # Status mode: show audit progress
     if args.status:
+        samples = load_samples(args.data, start=args.start, end=args.end)
         LOG_DIR.mkdir(parents=True, exist_ok=True)
         audited_ids = set()
         verdicts = {}
-        for f in LOG_DIR.glob("*.json"):
+        for f in LOG_DIR.rglob("*.json"):  # root and per-auditor subdirs
             with open(f) as fh:
                 r = json.load(fh)
             audited_ids.add(r.get("sample_id"))
